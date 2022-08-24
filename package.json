@@ -1,0 +1,23 @@
+{
+  "name": "projeto---webflix",
+  "description": ":heavy_check_mark: Este repositório contém o sistema WebFlix feito como parte dos requisitos para aprovação na disciplina de desenvolvimento Web do [Instituto Federal de Educação Ciência e Tecnologia de Rôndonia (IFRO)](https://portal.ifro.edu.br/ji-parana), Campos Ji-Paraná.",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Helberte/WebFlix.git"
+  },
+  "author": "Helberte | Mateus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Helberte/WebFlix/issues"
+  },
+  "homepage": "https://github.com/Helberte/WebFlix#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  },
+}
