@@ -74,9 +74,13 @@
   font-size: 1.1rem;
   font-weight: 400;
 }
+.info-open{
+  display: flex;
+}
 .info-open .button-go{
   border: 0;
   margin: 0;
+  display: block;
 }
 .info-open input{
   margin: 0;
