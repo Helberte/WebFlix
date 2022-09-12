@@ -123,9 +123,18 @@
   color: white;
   font-size: 25px;
   cursor: pointer;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .info-open .button-go:hover{
   background-color: red;
+}
+.info-open .button-go .icon-go{
+  margin-left: 10px;
+  padding: 0;
 }
 .info-open input{
   margin: 0;
