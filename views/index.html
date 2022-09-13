@@ -1,139 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="projeto apresentado como parte dos requisitos necessários para aprovação na matéria de desenvolvimento web">
-    <meta name="keywords" content="netflix, filme, diversão, passatempo">
-    <meta name="author" content="Mateus | Helberte">
+{% extends 'layout/layout.html' %}
 
-    <link rel="stylesheet" href="css/style.css">
 
-    <title>WebFlix</title>
-  </head>
-  <body>
-    <div class="top">
-      <div class="gradient">
-        <div class="gradient-2">
-          
-          <!-- section header -->
-          <header class="header-principal">
-            <span class="span-logo" > 
-              
-            </span>
-            <div class="options">
-              <select  name="language" id="language">                
-                <option value="portugues">Português</option>
-                <option value="english">English</option>
-              </select>  
-              <button class="button">Entrar</button>
-            </div>        
-          </header>
+{% block content %}
 
-          <!-- section header-center-->
-          <div class="header-center">
-            <h1>Filmes, séries e muito mais. Sem limites</h1>
-            <h3>Assista onde quiser. Cancele quando quiser.</h3>
-            <p>Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
-            <div class="info-open">
-              <input type="email" placeholder="Email" maxlength="200">
-              <button class="button-go">Vamos lá <ion-icon class="icon-go" name="chevron-forward-outline"></ion-icon> </button>
-            </div>          
-          </div>     
-        </div><!-- gradient-2 -->
-      </div><!-- gradient -->
-    </div><!-- top -->
+<div class="separetion"></div>
 
-    <!-- section Aproveite na TV -->
-    <div class="separetion"></div>
-    <div class="sessoes">
-      <div class="column-1">
-        <h1>Aproveite na TV.</h1>
-        <p>Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.</p>
-      </div>
-      <div class="column-2">      
-        <div class="imagem">
-          <video autoplay muted loop>
-            <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v">
-          </video>
-        </div>                 
-      </div>
-    </div>
+{% include 'contents/enjoyOnTv.html' %}
 
-    <!-- section Baixe séries -->
-    <div class="separetion"></div>
-    <div class="sessoes-2">
-      <div class="column-1">
-        <h1>Baixe séries para assistir offline.</h1>
-        <p>Salve seus títulos favoritos e sempre tenha algo para assistir.</p>
-      </div>
-      <div class="column-2">      
-        <div class="imagem">
-          <div class="Stranger">
-            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" alt="Stranger imagem">
-            <div class="text">
-              <p class="title">Stranger Things</p>
-              <p class="description">Download em andamento...</p>
-            </div>            
-            <ion-icon class="arrow-down-outline" name="arrow-down-outline"></ion-icon>
-          </div>
-        </div>        
-      </div>
-    </div>
+<div class="separetion"></div>
 
-    <!-- section crie perfis para crianças -->
-    <div class="separetion"></div>
-    <div class="sessoes-3">
-      <div class="column-1">
-        <h1>Crie perfis para crianças.</h1>
-        <p>Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem pagar a mais por isso.</p>
-      </div>
-      <div class="column-2">      
-        <div class="imagem">          
-        </div>        
-      </div>
-    </div>
+{% include 'contents/downloadSeries.html' %}
 
-    <!-- section footer -->
-    <div class="separetion"></div>
-    <footer class="footer-main">
-      <div class="center-footer">
-        <p>Dúvidas? Ligue <a href="#">0800 591 8942</a></p>
+<div class="separetion"></div>
 
-        <ul>
-          <a href="#"><li>Perguntas frequentes</li></a>
-          <a href="#"><li>Central de Ajuda</li></a>
-          <a href="#"><li>Conta</li></a>
-          <a href="#"><li>Media Center</li></a>
-          <a href="#"><li>Relações com investidores</li></a>
-          <a href="#"><li>Carreiras</li></a>
-          <a href="#"><li>Resgatar cartão pré-pago</li></a>
-          <a href="#"><li>Comprar cartão pré-pago</li></a>
-          <a href="#"><li>Formas de assistir</li></a>
-          <a href="#"><li>Termos de Uso</li></a>
-          <a href="#"><li>Privacidade</li></a>
-          <a href="#"><li>Preferências de cookies</li></a>
-          <a href="#"><li>Informações corporativas</li></a>
-          <a href="#"><li>Entre em contato</li></a>
-          <a href="#"><li>Teste de velocidade</li></a>
-          <a href="#"><li>Avisos legais</li></a>
-          <a href="#"><li>Só na Netflix</li></a>
-        </ul>
+{% include 'contents/createProfileForChild.html' %}
 
-        <select class="select-footer"  name="language" id="language">                
-          <option value="portugues">Português</option>
-          <option value="english">English</option>
-        </select>  
+<div class="separetion"></div>
 
-        <p class="web-flix-brasil">WebFlix Brasil</p>
-      </div>
-      
-
-    </footer>
-
-    <!-- scripts -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  </body>
-</html>
+{% endblock %}
