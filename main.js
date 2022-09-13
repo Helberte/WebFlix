@@ -16,8 +16,12 @@ app.use(express.static('public'));
 app.get('/',  (req, res) => {
   res.render('index',{
     nome: 'Webflix'
-  })
+  });
 })
+
+app.get('/home',(req, res) => {
+  res.render('login');
+});
 
 
 app.listen(8000, erro => {
