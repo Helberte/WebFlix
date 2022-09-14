@@ -19,7 +19,7 @@ app.get('/',  (req, res) => {
   });
 })
 
-app.get('/home',(req, res) => {
+app.get('/login',(req, res) => {
   res.render('login');
 });
 
