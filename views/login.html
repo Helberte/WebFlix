@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
- 
-  {% include 'parts/head.html' %}
+  <head>
+  
+    {% include 'parts/head.html' %}
 
-  <link rel="stylesheet" href="css/login.css">
-  <title>Login</title>
-</head>
-<body>
-  <img class="img-background" src="https://assets.nflxext.com/ffe/siteui/vlv3/701eec50-4b87-4dc0-9d00-b0f54025dc36/0994e0a6-dda1-402c-bcbc-480350941609/BR-pt-20220905-popsignuptwoweeks-perspective_alpha_website_medium.jpg" alt="imagem de fundo">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login</title>
+  </head>
+  <body>
 
-  <div class="container">    
-    
-    <!-- section header -->
-    <header>      
-      <div class="img-logo">
-        <img src="img/logo.png" alt="Logomarca">    
-      </div>        
-    </header>
+    <div class="container">    
+      <div class="container-content">
 
-    <!-- section login -->
-    <div class="div-login">
-      <h1>Entrar</h1>
+        <!-- section header -->
+        <header>      
+          <div class="img-logo">
+            <img src="img/logo.png" alt="Logomarca">    
+          </div>        
+        </header>
 
-      <input type="text" placeholder="Email ou número de telefone">
-      <input type="password">
+        <!-- section login -->
+        <div class="div-login">
+          <h1>Entrar</h1>
 
-      <button class="button-entry">Entrar</button>
-      <div class="lembre-de-min">
-        <div class="lembrar">
-          <input type="checkbox" name="lembrar" id="lembrar" value="lembrar">
-          <label for="lembrar">Lembre-se de min</label>
-        </div>
-        
-        <a href="#">Precisa de ajuda?</a>
-      </div>
+          <input type="text" placeholder="Email ou número de telefone">
+          <input type="password">
+
+          <button class="button-entry">Entrar</button>
+          <div class="lembre-de-min">
+            <div class="lembrar">
+              <input type="checkbox" name="lembrar" id="lembrar" value="lembrar">
+              <label for="lembrar">Lembre-se de min</label>
+            </div>
+            
+            <a href="#">Precisa de ajuda?</a>
+          </div>
 
 
-      <p class="p-novo-aqui">Novo por aqui? <a href="#">Assine agora.</a></p>
-      <p class="p-info-recaptcha">Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <a>Saiba mais.</a></p>
-    </div> <!-- section login -->
+          <p class="p-novo-aqui">Novo por aqui? <a href="#">Assine agora.</a></p>
+          <p class="p-info-recaptcha">Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <a>Saiba mais.</a></p>
+        </div> <!-- section login -->
 
-    <!-- section footer -->
-    <footer>
-      <div class="div-center">
-        <p>Dúvidas? Ligue <a href="#">0800 591 8942</a></p>
+        <!-- section footer -->
+        <footer>
+          <div class="div-center">
+            <p>Dúvidas? Ligue <a href="#">0800 591 8942</a></p>
 
-        <ul>
-          <li>Perguntas</li>  
-          <li>Central de Ajuda</li>  
-          <li>Termos de Uso</li>  
-          <li>Privacidade</li>  
-          <li>Preferências de cookies</li>  
-          <li>Informações corporativas</li>  
-        </ul>
+            <ul>
+              <li>Perguntas</li>  
+              <li>Central de Ajuda</li>  
+              <li>Termos de Uso</li>  
+              <li>Privacidade</li>  
+              <li>Preferências de cookies</li>  
+              <li>Informações corporativas</li>  
+            </ul>
 
-        <select name="linguage" id="linguage">
-          <option value="portugues">Português</option>
-          <option value="inglish">Inglish</option>
-        </select>
-      </div>
-    </footer>
-  </div>
+            <select name="linguage" id="linguage">
+              <option value="portugues">Português</option>
+              <option value="inglish">Inglish</option>
+            </select>
+          </div>
+        </footer>
 
-  {% include 'parts/scripts.html' %}
-</body> 
+      </div><!-- container-content -->  
+      
+      <img class="img-background" src="https://assets.nflxext.com/ffe/siteui/vlv3/701eec50-4b87-4dc0-9d00-b0f54025dc36/0994e0a6-dda1-402c-bcbc-480350941609/BR-pt-20220905-popsignuptwoweeks-perspective_alpha_website_medium.jpg" alt="imagem de fundo">
+
+    </div><!-- container -->
+      
+    {% include 'parts/scripts.html' %}
+  </body> 
 </html>
