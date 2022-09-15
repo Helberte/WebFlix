@@ -113,6 +113,7 @@ body{
   border-radius: 4px;
   font-size: 18px;
   font-weight: 500;
+  cursor: pointer;
 }
 .container-center-login .div-login .lembre-de-min{
   display: flex;

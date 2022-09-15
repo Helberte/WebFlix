@@ -23,6 +23,9 @@ app.get('/login',(req, res) => {
   res.render('login');
 });
 
+app.get('/configurar',(req, res) => {
+  res.render('configurar');
+});
 
 app.listen(8000, erro => {
   if(erro){
