@@ -33,6 +33,7 @@ body{
 
   display: flex;
   flex-direction: column;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), transparent);
 }
 
 /* section cabeçalho */
@@ -61,11 +62,11 @@ body{
 .container-center-login{
   flex: 1;
 
-  width: 32%;
+  width: 28rem;
   margin: auto;
 }
 .container-center-login .div-login{
-  height: 85vh;
+  min-height: 630px;
 
   color: white;
   background-color: rgba(0, 0,0,0.7);
