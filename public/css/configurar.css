@@ -36,13 +36,14 @@ header a:hover{
 /* section container */
 
 .content{
-  height: 89vh;
+  height: 670px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .content .content-center{
   display: flex;
   flex-direction: column;
@@ -99,7 +100,7 @@ header a:hover{
 /* section content-senha */
 
 .content-senha{
-  height: 85vh;
+  height: 670px;
 }
 .content-senha .content-senha-center{
   width: 450px;
@@ -153,7 +154,7 @@ header a:hover{
 /* section escolha seu plano */
 
 .content-escolha-plano{
-  height: 90vh;
+  height: 670px;
 
   display: flex;
   justify-content: center;
