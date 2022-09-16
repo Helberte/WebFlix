@@ -31,6 +31,11 @@ app.get('/criarsenha',(req, res) => {
   res.render('criar_senha');
 });
 
+app.get('/escolhaseuplano',(req, res) => {
+  res.render('escolha_seu_plano');
+});
+
+
 app.listen(8000, erro => {
   if(erro){
     console.log('Deu erro');
