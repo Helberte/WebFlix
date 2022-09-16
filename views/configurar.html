@@ -9,42 +9,10 @@
   </head>
   <body>
     
-    <header>
-      <img src="img/logo.png" alt="Imagem logo Netflix">
+    {% include 'parts/configurar/header.html' %}
 
-      <a href="#">Entrar</a>
-    </header>
+    {% include 'parts/configurar/content.html' %}
 
-    <div class="content">
-      <div class="content-center">
-        <span class="img-center"></span>
-        <p class="passos">Passo 1 de 3</p>
-        <h1>Termine de configurar sua conta</h1>
-        <p class="p-messege">A Netflix é personalizada para você. <br>Crie uma senha para assistir em qualquer aparelho quando quiser.
-        </p>
-
-        <button>Próximo</button>
-      </div>      
-    </div>
-
-    <footer>
-      <div class="div-center">
-        <p>Dúvidas? Ligue <a href="#">0800 591 8942</a></p>
-
-        <ul>
-          <a href="#"><li>Perguntas frequentes</li></a>
-          <a href="#"><li>Preferências de cookies</li></a>
-          <a href="#"><li>Central de Ajuda</li></a>
-          <a href="#"><li>Informações corporativas</li></a>
-          <a href="#"><li>Termos de Uso</li></a>
-          <a href="#"><li>Privacidade</li></a>
-        </ul>
-
-        <select name="portugues-inglish" id="pt-inglish">
-          <option value="portugues">Português</option>
-          <option value="inglish">Inglish</option>
-        </select>
-      </div>
-    </footer>
+    {% include 'parts/configurar/footer.html' %}
   </body>
 </html>
