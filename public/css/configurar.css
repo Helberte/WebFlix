@@ -105,8 +105,49 @@ header a:hover{
   width: 450px;
   margin: auto;
   padding: 33px 0;
+  color: #333333;
 }
+.content-senha .content-senha-center .passos{
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+.content-senha .content-senha-center h1{
+  margin-bottom: 15px;
+}
+.content-senha .content-senha-center .message{
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+.content-senha .content-senha-center .campos-senha{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.content-senha .content-senha-center .campos-senha input{
+  height: 58px;
+  padding: 0 10px;
+  font-size: 16px;
+}
+.content-senha .content-senha-center .campos-senha .email{
+  margin-bottom: 10px;
+}
+.content-senha .content-senha-center .campos-senha button{
+  height: 65px;
+  border: none;
+  margin-top: 25px;
 
+  background-color: rgb(229, 9, 20);
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+  border-radius: 3.5px;
+  cursor: pointer;
+}
+.content-senha .content-senha-center .campos-senha button:hover{
+  background-color: red;
+}
 
 /* section footer */
 
