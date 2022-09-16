@@ -27,6 +27,10 @@ app.get('/configurar',(req, res) => {
   res.render('configurar');
 });
 
+app.get('/criarsenha',(req, res) => {
+  res.render('criar_senha');
+});
+
 app.listen(8000, erro => {
   if(erro){
     console.log('Deu erro');

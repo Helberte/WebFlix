@@ -96,6 +96,18 @@ header a:hover{
   background-color: red;
 }
 
+/* section content-senha */
+
+.content-senha{
+  height: 85vh;
+}
+.content-senha .content-senha-center{
+  width: 450px;
+  margin: auto;
+  padding: 33px 0;
+}
+
+
 /* section footer */
 
 footer{

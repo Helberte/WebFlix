@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+
+    {% include '../parts/head.html' %}
+
+    <link rel="stylesheet" href="css/configurar.css">
+    <title>Netflix</title>
+  </head>
+  <body>
+    
+    <!-- cabeçalho -->
+    {% include '../parts/configurar/header.html' %}
+
+    <!-- conteúdo -->
+    {% block content %}
+
+    {% endblock %}
+    
+    <!-- rodapé -->
+    {% include '../parts/configurar/footer.html' %}
+  </body>
+</html>
