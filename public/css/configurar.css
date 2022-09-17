@@ -219,6 +219,23 @@ header a:hover{
 .content-escolha-plano .content-escolha-plano-center .bt-next:hover{
   background-color: red;
 }
+
+/* Section planos */
+
+
+.content-planos{
+  height: 670px;
+}
+.content-planos .content-planos-center{
+  width: 920px;
+  margin: auto;
+}
+
+
+
+
+
+
 /* section footer */
 
 footer{

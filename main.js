@@ -34,11 +34,14 @@ app.get('/escolhaseuplano',(req, res) => {
   res.render('escolha_seu_plano');
 });
 
+app.get('/planos',(req, res) => {
+  res.render('planos');
+});
 
 app.listen(8000, erro => {
   if(erro){
     console.log('Deu erro');
   }else{
-    console.log('Servidor levantado');
+    console.log('Servidor levantado p:8000');
   }
 })
