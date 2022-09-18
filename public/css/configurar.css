@@ -326,18 +326,18 @@ header a:hover{
   position: relative;
   
 }
+
+
 .content-planos .content-planos-center table tr th .card.active{
   background-color: red;
 }
 .content-planos .content-planos-center table tr th .card .seta.active{
   border-top: 11px solid red;
 }
-.content-planos .content-planos-center table tr th .card.desactive{
-  background-color: #ef6b72;
+.content-planos .content-planos-center table tr .linha-content.active{
+  color: red;
 }
-.content-planos .content-planos-center table tr th .card .seta.desactive{
-  border-top: 11px solid transparent;
-}
+
 .content-planos .content-planos-center table tr th .card .seta{
   height: 0;
   width: 0;
