@@ -324,24 +324,37 @@ header a:hover{
   background-color: #ef6b72;
   border-radius: 2.5px;
   position: relative;
+  
 }
-.content-planos .content-planos-center table tr th .card::after{
-  content: "";
+.content-planos .content-planos-center table tr th .card.active{
+  background-color: red;
+}
+.content-planos .content-planos-center table tr th .card .seta.active{
+  border-top: 11px solid red;
+}
+.content-planos .content-planos-center table tr th .card.desactive{
+  background-color: #ef6b72;
+}
+.content-planos .content-planos-center table tr th .card .seta.desactive{
+  border-top: 11px solid transparent;
+}
+.content-planos .content-planos-center table tr th .card .seta{
   height: 0;
   width: 0;
 
   border-bottom: 11px solid transparent;
   border-left: 11px solid transparent;
-  border-top: 11px solid #ef6b72;
+  border-top: 11px solid transparent;
   border-right: 11px solid transparent;
 
-  display: block;
   position: absolute;
   bottom: -22px;
 }
+
 .content-planos .content-planos-center table .linha-1 .linha-1-column{
   height: 147px;
   padding: 15px 22px;
+ 
 }
 
 
