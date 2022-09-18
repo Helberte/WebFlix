@@ -224,15 +224,125 @@ header a:hover{
 
 
 .content-planos{
-  height: 670px;
+  height: 930px;
 }
 .content-planos .content-planos-center{
   width: 920px;
   margin: auto;
+  color: #333333;
+}
+.content-planos .content-planos-center .passos-planos{
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 22px;
+}
+.content-planos .content-planos-center .escolha-certo{
+  margin-top: 10px;
+  font-weight: 500;
+}
+.content-planos .content-planos-center ul{
+  margin-top: 15px;
+  font-size: 18px;
+}
+.content-planos .content-planos-center ul li{
+  display: flex;
+  align-items: center;
+}
+.content-planos .content-planos-center ul li span .icon{
+  display: block;
+  font-size: 32px;
+}
+.content-planos .content-planos-center table{
+  border-collapse: collapse;
+  width: 100%;
+}
+.content-planos .content-planos-center table .linha-2,
+.content-planos .content-planos-center table .linha-3,
+.content-planos .content-planos-center table .linha-4{
+  border-bottom: solid 1px #a3a3a3;
+}
+.content-planos .content-planos-center table tr td{
+  padding: 20px 0;
+}
+.content-planos .content-planos-center table .linha-2 .linha-content,
+.content-planos .content-planos-center table .linha-3 .linha-content,
+.content-planos .content-planos-center table .linha-4 .linha-content,
+.content-planos .content-planos-center table .linha-5 .linha-content{
+  text-align: center;
+  padding: 0 35px;
+  font-weight: 500;
+  color: #737373;
 }
 
+.content-planos .content-planos-center table .linha-5 .linha-content{
+  font-size: 35px;
+}
+.content-planos .content-planos-center .messege-1,
+.content-planos .content-planos-center .messege-2{
+  font-size: 13px;
+  margin-top: 15px;
+  color: #737373;
+  width: 80%;
+}
+.content-planos .content-planos-center .messege-1 a:hover{
+  text-decoration: underline;
+}
+.content-planos .content-planos-center .div-center-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+}
 
+.content-planos .content-planos-center .div-center-button button{
+  height: 67px;
+  width: 440px;
+  border: none;
 
+  background-color: rgb(229, 9, 20);
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+  border-radius: 3.5px;
+  cursor: pointer;
+}
+.content-planos .content-planos-center .div-center-button button:hover{
+  background-color: red;
+}
+.content-planos .content-planos-center table{
+  margin-top: 17px;
+}
+.content-planos .content-planos-center table tr th .card{
+  width: 100%;
+  height: 100%;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ef6b72;
+  border-radius: 2.5px;
+  position: relative;
+}
+.content-planos .content-planos-center table tr th .card::after{
+  content: "";
+  height: 0;
+  width: 0;
+
+  border-bottom: 11px solid transparent;
+  border-left: 11px solid transparent;
+  border-top: 11px solid #ef6b72;
+  border-right: 11px solid transparent;
+
+  display: block;
+  position: absolute;
+  bottom: -22px;
+}
+.content-planos .content-planos-center table .linha-1 .linha-1-column{
+  height: 147px;
+  padding: 15px 22px;
+}
 
 
 
