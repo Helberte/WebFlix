@@ -38,6 +38,11 @@ app.get('/planos',(req, res) => {
   res.render('planos');
 });
 
+app.get('/formapagamento',(req, res) => {
+  res.render('escolha_como_pagar');
+});
+
+
 app.listen(8000, erro => {
   if(erro){
     console.log('Deu erro');

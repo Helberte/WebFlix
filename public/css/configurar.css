@@ -323,10 +323,8 @@ header a:hover{
   align-items: center;
   background-color: #ef6b72;
   border-radius: 2.5px;
-  position: relative;
-  
+  position: relative;  
 }
-
 
 .content-planos .content-planos-center table tr th .card.active{
   background-color: red;
@@ -356,6 +354,11 @@ header a:hover{
   padding: 15px 22px;
  
 }
+/* section escolha como pagar */
+
+
+
+
 
 
 
