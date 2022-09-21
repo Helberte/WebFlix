@@ -1,46 +1,35 @@
 const express = require('express');
 const app = express();
 const nunjucks = require('nunjucks');
+// rotas
+const base = require('./routes/base');
+const configurar = require('./routes/configurar');
+const criar_senha = require('./routes/criar_senha');
+const escolha_seu_plano = require('./routes/escolha_seu_plano');
+const forma_pagamento = require('./routes/forma_pagamento');
+const login = require('./routes/login');
+const planos = require('./routes/planos');
 
+// configuração do nunjucks
 nunjucks.configure('views', {
   autoescape: true,
   noCache: true,
   express: app
 })
 
+// configuração do express
 app.set('view engine', 'html');
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: false }));
 
-
-app.get('/',  (req, res) => {
-  res.render('index',{
-    nome: 'Webflix'
-  });
-})
-
-app.get('/login',(req, res) => {
-  res.render('login');
-});
-
-app.get('/configurar',(req, res) => {
-  res.render('configurar');
-});
-
-app.get('/criarsenha',(req, res) => {
-  res.render('criar_senha');
-});
-
-app.get('/escolhaseuplano',(req, res) => {
-  res.render('escolha_seu_plano');
-});
-
-app.get('/planos',(req, res) => {
-  res.render('planos');
-});
-
-app.get('/formapagamento',(req, res) => {
-  res.render('escolha_como_pagar');
-});
+// uso das rotas
+app.use(base);
+app.use(configurar);
+app.use(criar_senha);
+app.use(escolha_seu_plano);
+app.use(forma_pagamento);
+app.use(login);
+app.use(planos);
 
 
 app.listen(8000, erro => {
