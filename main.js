@@ -23,7 +23,7 @@ app.set('view engine', 'html');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
-// uso das rotas
+// uso das rotas teste
 app.use(base);
 app.use(configurar);
 app.use(criar_senha);
