@@ -357,12 +357,119 @@ header a:hover{
 /* section escolha como pagar */
 
 .content-escolha-como-pagar{
-  height: 930px;
+  height: 670px;
 }
+.content-escolha-como-pagar-center{
+  width: 500px;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  color: #333333;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content-escolha-como-pagar-center .span-icone{
+  width: 50px;
+  height: 50px;
+  display: block;
 
+  background-image: url('https://assets.nflxext.com/ffe/siteui/acquisition/simplicity/Lock.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.content-escolha-como-pagar-center .passos-3-de-3{
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 45px;
+}
+.content-escolha-como-pagar-center .escolha-como-pagar{
+  font-weight: 500;
+}
+.content-escolha-como-pagar-center .info{
+  font-size: 18px;
+  width: 90%;
+  margin-top: 15px;
+}
+.content-escolha-como-pagar-center .seguro-tranquilidade{
+  font-size: 18px;
+  margin-top: 15px;
+}
+.content-escolha-como-pagar-center .seguro-tranquilidade strong{
+  font-weight: 500;
+}
+.content-escolha-como-pagar-center .criptografia{
+  font-size: 13px;
+  align-self: flex-end;
+  margin-top: 15px;
+}
+.content-escolha-como-pagar-center .criptografia span .icone{
+  color: #ffb53f;
+}
+.content-escolha-como-pagar-center .forma-de-pagamento{
+  border: solid 2.7px #c7c7c7;
+  width:  100%;
+  height: 90px;
+  border-radius: 6px;
 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding-left: 13px;
 
+  cursor: pointer;
+}
+.content-escolha-como-pagar-center .forma-de-pagamento span {
+  background-image: url('https://assets.nflxext.com/ffe/siteui/acquisition/reg_selection/chevron_060915_2.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+  width: 30px;
+  height: 18px;
+  position: absolute;
+  right: 0;
+}
+.content-escolha-como-pagar-center .forma-de-pagamento-1{
+  margin-top: 2px;
+}
+.content-escolha-como-pagar-center .forma-de-pagamento-1 .column-1 p{
+  text-align: start;
+}
+.content-escolha-como-pagar-center .forma-de-pagamento-1 .column-1 .cartoes-bandeiras{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.content-escolha-como-pagar-center .forma-de-pagamento-1 .column-1 .cartoes-bandeiras img{
+  width: 43px;
+  height: 26px;
+
+  margin-top: 4px;
+  margin-right: 4px;
+}
+.content-escolha-como-pagar-center .forma-de-pagamento-2{
+  height: 70px;
+  margin-top: 5px;
+  margin-bottom: 75px;
+}
+.content-escolha-como-pagar-center .forma-de-pagamento-2 .column-1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.content-escolha-como-pagar-center .forma-de-pagamento-2 .column-1 img{
+  width: 43px;
+  height: 26px;
+
+  margin-left: 10px;
+}
 
 /* section footer */
 
