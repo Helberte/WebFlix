@@ -1,5 +1,25 @@
 <div class="container-configurar-cartao">
   <div class="container-configurar-cartao-center">
-    <h1>Configurar cartão center</h1>
+    <p class="passos-3-de-3">Passo 3 de 3</p> 
+    <h1>Informe os dados do seu cartão de crédito ou débito</h1>
+
+    <div class="cartoes-bandeiras">
+      <img src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/visa-v3.svg" alt="Visa">
+      <img src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/mastercard-v2.svg" alt="mastercard">
+      <img src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/amex-v2.svg" alt="amex">
+      <img src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/elo-v2.svg" alt="elo">
+      <img src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/hipercard-v2.svg" alt="hipercard">
+    </div>
+  
+    <form action="#">
+      <input type="text" name="nome" id="campo-nome" placeholder="Nome" maxlength="100">
+      <input type="text" name="sobrenome" id="campo-sobrenome" placeholder="Sobrenome" maxlength="100">
+      <input type="text" name="numero_cartao" id="numero-cartao" placeholder="Número do cartão" maxlength="100">
+      <input type="text" name="data_validade" id="data-validade" placeholder="Informe a data de validade (MM/AA)" maxlength="100">
+      <div class="codigo-seguranca">
+        <input type="text" name="codigo_seguranca" id="codigo-seguranca" placeholder="Informe o código de segurança (CVV)" maxlength="100">
+        <span><ion-icon name="help-circle-outline"></ion-icon></span>
+      </div>      
+    </form>
   </div>
 </div>
