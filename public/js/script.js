@@ -22,77 +22,123 @@ const linha5_column1 = document.getElementsByClassName('linha-5-column-1')[0];
 const linha5_column2 = document.getElementsByClassName('linha-5-column-2')[0];
 const linha5_column3 = document.getElementsByClassName('linha-5-column-3')[0];
 
+const bt_vamos_la = document.getElementById('bt-vamos-la');
+const bt_login_entrar = document.getElementById('bt-login-entrar');
+const bt_configurar_proximo = document.getElementById('bt-configurar-proximo');
+const bt_criar_senha_proximo = document.getElementById('bt-criar-senha-proximo');
+const bt_escolha_seu_plano_proximo = document.getElementById('bt-escolha-seu-plano-proximo');
+const bt_planos_proximo = document.getElementById('bt-planos-proximo');
 
-card1.addEventListener('click', function () {
-  card3.classList.remove('active')
-  seta3.classList.remove('active');
-  card2.classList.remove('active');
-  seta2.classList.remove('active');
 
-  card1.classList.add('active');
-  seta1.classList.add('active');
-  linha2_column1.classList.add('active');
-  linha3_column1.classList.add('active');
-  linha4_column1.classList.add('active');
-  linha5_column1.classList.add('active');
+if(bt_vamos_la){
+  bt_vamos_la.addEventListener('click', () => {
+    window.location = '/login';
+  });
+}
 
-  linha2_column2.classList.remove('active');
-  linha3_column2.classList.remove('active');
-  linha4_column2.classList.remove('active');
-  linha5_column2.classList.remove('active');
+if(bt_login_entrar){
+  bt_login_entrar.addEventListener('click', () => {
+    window.location = '/configurar';
+  });
+}
 
-  linha2_column3.classList.remove('active');
-  linha3_column3.classList.remove('active');
-  linha4_column3.classList.remove('active');
-  linha5_column3.classList.remove('active');
-});
+if(bt_configurar_proximo){
+  bt_configurar_proximo.addEventListener('click', () => {
+    window.location = '/criarsenha';
+  });
+}
 
-card2.addEventListener('click', function () {
-  card3.classList.remove('active')
-  seta3.classList.remove('active');
-  card1.classList.remove('active');
-  seta1.classList.remove('active');
+if(bt_criar_senha_proximo){
+  bt_criar_senha_proximo.addEventListener('click', () => {
+    window.location = '/escolhaseuplano';
+  });
+}
 
-  linha2_column1.classList.remove('active');
-  linha3_column1.classList.remove('active');
-  linha4_column1.classList.remove('active');
-  linha5_column1.classList.remove('active');
+if(bt_escolha_seu_plano_proximo){
+  bt_escolha_seu_plano_proximo.addEventListener('click', () => {
+    window.location = '/planos';
+  });
+}
 
-  linha2_column3.classList.remove('active');
-  linha3_column3.classList.remove('active');
-  linha4_column3.classList.remove('active');
-  linha5_column3.classList.remove('active');
+if(bt_planos_proximo){
+  bt_planos_proximo.addEventListener('click', () => {
+    window.location = '/formapagamento';
+  });
+}
 
-  card2.classList.add('active');
-  seta2.classList.add('active');
+if(card1 && card2 && card3){
+  card1.addEventListener('click', function () {
+    card3.classList.remove('active')
+    seta3.classList.remove('active');
+    card2.classList.remove('active');
+    seta2.classList.remove('active');
+  
+    card1.classList.add('active');
+    seta1.classList.add('active');
+    linha2_column1.classList.add('active');
+    linha3_column1.classList.add('active');
+    linha4_column1.classList.add('active');
+    linha5_column1.classList.add('active');
+  
+    linha2_column2.classList.remove('active');
+    linha3_column2.classList.remove('active');
+    linha4_column2.classList.remove('active');
+    linha5_column2.classList.remove('active');
+  
+    linha2_column3.classList.remove('active');
+    linha3_column3.classList.remove('active');
+    linha4_column3.classList.remove('active');
+    linha5_column3.classList.remove('active');
+  });
 
-  linha2_column2.classList.add('active');
-  linha3_column2.classList.add('active');
-  linha4_column2.classList.add('active');
-  linha5_column2.classList.add('active');
-});
 
-card3.addEventListener('click', function () {
-  card2.classList.remove('active')
-  seta2.classList.remove('active');
-  card1.classList.remove('active');
-  seta1.classList.remove('active');
-
-  linha2_column1.classList.remove('active');
-  linha3_column1.classList.remove('active');
-  linha4_column1.classList.remove('active');
-  linha5_column1.classList.remove('active');
-
-  linha2_column2.classList.remove('active');
-  linha3_column2.classList.remove('active');
-  linha4_column2.classList.remove('active');
-  linha5_column2.classList.remove('active');
-
-  card3.classList.add('active');
-  seta3.classList.add('active');
-
-  linha2_column3.classList.add('active');
-  linha3_column3.classList.add('active');
-  linha4_column3.classList.add('active');
-  linha5_column3.classList.add('active');
-});
+  card2.addEventListener('click', function () {
+    card3.classList.remove('active')
+    seta3.classList.remove('active');
+    card1.classList.remove('active');
+    seta1.classList.remove('active');
+  
+    linha2_column1.classList.remove('active');
+    linha3_column1.classList.remove('active');
+    linha4_column1.classList.remove('active');
+    linha5_column1.classList.remove('active');
+  
+    linha2_column3.classList.remove('active');
+    linha3_column3.classList.remove('active');
+    linha4_column3.classList.remove('active');
+    linha5_column3.classList.remove('active');
+  
+    card2.classList.add('active');
+    seta2.classList.add('active');
+  
+    linha2_column2.classList.add('active');
+    linha3_column2.classList.add('active');
+    linha4_column2.classList.add('active');
+    linha5_column2.classList.add('active');
+  });
+  
+  card3.addEventListener('click', function () {
+    card2.classList.remove('active')
+    seta2.classList.remove('active');
+    card1.classList.remove('active');
+    seta1.classList.remove('active');
+  
+    linha2_column1.classList.remove('active');
+    linha3_column1.classList.remove('active');
+    linha4_column1.classList.remove('active');
+    linha5_column1.classList.remove('active');
+  
+    linha2_column2.classList.remove('active');
+    linha3_column2.classList.remove('active');
+    linha4_column2.classList.remove('active');
+    linha5_column2.classList.remove('active');
+  
+    card3.classList.add('active');
+    seta3.classList.add('active');
+  
+    linha2_column3.classList.add('active');
+    linha3_column3.classList.add('active');
+    linha4_column3.classList.add('active');
+    linha5_column3.classList.add('active');
+  });
+}
