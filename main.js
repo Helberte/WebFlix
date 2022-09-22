@@ -10,6 +10,7 @@ const forma_pagamento = require('./routes/forma_pagamento');
 const login = require('./routes/login');
 const planos = require('./routes/planos');
 const configurar_cartao = require('./routes/configurar_cartao');
+const criar_perfil = require('./routes/criar_perfil');
 
 // configuração do nunjucks
 nunjucks.configure('views', {
@@ -32,6 +33,7 @@ app.use(forma_pagamento);
 app.use(login);
 app.use(planos);
 app.use(configurar_cartao);
+app.use(criar_perfil);
 
 app.listen(8000, erro => {
   if(erro){
