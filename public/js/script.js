@@ -28,7 +28,7 @@ const bt_configurar_proximo = document.getElementById('bt-configurar-proximo');
 const bt_criar_senha_proximo = document.getElementById('bt-criar-senha-proximo');
 const bt_escolha_seu_plano_proximo = document.getElementById('bt-escolha-seu-plano-proximo');
 const bt_planos_proximo = document.getElementById('bt-planos-proximo');
-
+const forma_pagamento_1 = document.getElementById('forma-paramento-1');
 
 if(bt_vamos_la){
   bt_vamos_la.addEventListener('click', () => {
@@ -63,6 +63,12 @@ if(bt_escolha_seu_plano_proximo){
 if(bt_planos_proximo){
   bt_planos_proximo.addEventListener('click', () => {
     window.location = '/formapagamento';
+  });
+}
+
+if(forma_pagamento_1){
+  forma_pagamento_1.addEventListener('click', () => {
+    window.location = '/configurarcartao';
   });
 }
 
