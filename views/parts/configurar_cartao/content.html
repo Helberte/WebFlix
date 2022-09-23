@@ -24,22 +24,23 @@
 
     <p class="forma-preferida"><strong>Selecione sua forma preferida de processar o pagamento:</strong></p>
     <div class="container-chekbox">
-      <input type="radio" id="credito" name="radio-cartao" value="credito">
+      <input type="radio" id="credito" name="radio-cartao" value="credito" checked>
       <label for="credito">Crédito</label>
+
       <input type="radio" id="debito" name="radio-cartao" value="debito">
       <label for="debito">Débito</label>
     </div>
 
     <div class="plano-escolhido">
       <div class="resumo-compra">
-        <p>R$ 25,90/mês</p>
-        <p>Plano Básico</p>
+        <p><strong>R$ 25,90/mês</strong></p>
+        <p class="plano-basico">Plano Básico</p>
       </div>
       <button>Mudar</button>
     </div>
-    <p>Os cartões elegíveis para transações de débito e crédito podem ser processados ​de qualquer maneira.</p>
-    <p>Ao clicar no botão “Iniciar assinatura” abaixo, você concorda com nossos Termos de Uso , Declaração de Privacidade , que você tem mais de 18 anos e que a<strong> Netflix continuará automaticamente sua assinatura e cobrará a taxa de assinatura (atualmente R$ 25,90/mês) para seu método de pagamento até que você cancele. Você pode cancelar a qualquer momento para evitar cobranças futuras</strong>. Para cancelar, vá para Conta e clique em “Cancelar assinatura”.</p>
+    <p class="info-1">Os cartões elegíveis para transações de débito e crédito podem ser processados ​de qualquer maneira.</p>
+    <p class="info-2">Ao clicar no botão “Iniciar assinatura” abaixo, você concorda com nossos Termos de Uso , Declaração de Privacidade , que você tem mais de 18 anos e que a<strong> Netflix continuará automaticamente sua assinatura e cobrará a taxa de assinatura (atualmente R$ 25,90/mês) para seu método de pagamento até que você cancele. Você pode cancelar a qualquer momento para evitar cobranças futuras</strong>. Para cancelar, vá para Conta e clique em “Cancelar assinatura”.</p>
 
-    <button>Iniciar associação</button>
+    <button id="bt-iniciar-associacao" class="bt-iniciar-associacao">Iniciar associação</button>
   </div>
 </div>

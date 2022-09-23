@@ -29,6 +29,8 @@ const bt_criar_senha_proximo = document.getElementById('bt-criar-senha-proximo')
 const bt_escolha_seu_plano_proximo = document.getElementById('bt-escolha-seu-plano-proximo');
 const bt_planos_proximo = document.getElementById('bt-planos-proximo');
 const forma_pagamento_1 = document.getElementById('forma-paramento-1');
+const bt_iniciar_associacao = document.getElementById('bt-iniciar-associacao');
+const container_configurar_cartao_center= document.getElementsByClassName('container-configurar-cartao-center')[0];
 
 if(bt_vamos_la){
   bt_vamos_la.addEventListener('click', () => {
@@ -71,6 +73,14 @@ if(forma_pagamento_1){
     window.location = '/configurarcartao';
   });
 }
+
+
+if(bt_iniciar_associacao){
+  bt_iniciar_associacao.addEventListener('click', () => {
+    container_configurar_cartao_center.classList.add('active');
+  });
+}
+
 
 if(card1 && card2 && card3){
   card1.addEventListener('click', function () {
