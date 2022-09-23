@@ -473,18 +473,76 @@ header a:hover{
 
 /* section configurar cartão */
 
+.container-configurar-cartao .container-configurar-cartao-center{
+  width: 440px;
+  margin: auto;
+  color: #333333;
+}
+.container-configurar-cartao-center .passos-3-de-3{
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 28px;
+}
+.container-configurar-cartao-center h1{
+  font-weight: 500;
+}
+.container-configurar-cartao-center .cartoes-bandeiras{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 
+  margin-top: 15px;
+}
+.container-configurar-cartao-center .cartoes-bandeiras img{
+  width: 43px;
+  height: 26px;
+  margin-right: 4px;
+}
+.container-configurar-cartao-center .formulario-cartao{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
+  margin-top: 8px;
+}
+.container-configurar-cartao-center .formulario-cartao input{
+  height: 59px;
+  margin-bottom: 10px;
+  padding-left: 9px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.container-configurar-cartao-center .formulario-cartao .codigo-seguranca{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px #737373;
+  border-radius: 2px;
+}
+.container-configurar-cartao-center .formulario-cartao .codigo-seguranca span .icon{
+  font-size: 47px;
+  font-weight: 300;
+  margin-right: 3px;
+  opacity: 0.5;
+  display: block;
+}
+.container-configurar-cartao-center .formulario-cartao .codigo-seguranca .input-cod-seguranca{
+  margin: 0;
+  width: 100%;
+  border: none;
+}
+.container-configurar-cartao-center .forma-preferida{
+  margin-top: 23px;
+  font-weight: 400;
+}
+.container-configurar-cartao-center .container-chekbox{
+  margin-top: 5px;
+}
+.container-configurar-cartao-center .container-chekbox input{
 
- 
-
-
-
-
-
-
-
-
+}
 
 
 
