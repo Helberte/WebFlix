@@ -632,11 +632,25 @@ header a:hover{
   background-color: red;
 }
 /* ANIMAÇÃO CSS */
-.container-configurar-cartao .container-configurar-cartao-center.active{
-  margin-left: 100px;
-  /* opacity: 0; */
+.container-configurar-cartao .animation{
+ 
+  position: relative;
+  animation: deslocament;
+  animation-duration: .2s;
+  opacity: 0;
 }
 
+@keyframes deslocament {
+  from{
+    opacity: 1;
+    left: 0;
+  }
+  to{    
+    left: -35px;
+    opacity: 0;
+  }
+
+}
 
 /* section footer */
 
