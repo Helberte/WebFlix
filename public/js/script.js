@@ -78,6 +78,7 @@ if(forma_pagamento_1){
 if(bt_iniciar_associacao){
   bt_iniciar_associacao.addEventListener('click', () => {
     container_configurar_cartao_center.classList.add('animation');
+    window.location = '/criarperfilprimeiroacesso';
   });
 }
 
