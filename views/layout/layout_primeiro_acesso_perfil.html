@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+
+    {% include '../parts/head.html' %}
+
+    <link rel="stylesheet" href="css/layout_primeiro_acesso_perfil.css">
+    <title>Netflix</title>
+  </head>
+  <body>
+    
+    <!-- cabeçalho -->    
+    <header>
+      <img src="img/logo.png" alt="Imagem logo Netflix">
+    
+      {% block header_entry %}
+
+      {% endblock %}      
+    </header>
+
+    <!-- conteúdo -->
+    {% block content %}
+
+    {% endblock %}
+    
+    <!-- rodapé -->
+    {% include '../parts/configurar/footer.html' %}
+
+    <!-- scripts -->
+    {% include '../parts/scripts.html' %}
+  </body>
+</html>
