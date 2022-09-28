@@ -473,27 +473,183 @@ header a:hover{
 
 /* section configurar cartão */
 
+.container-configurar-cartao .container-configurar-cartao-center{
+  height: 1120px;
+  width: 440px;
+  margin: auto;
+  color: #333333;
 
+}
+.container-configurar-cartao-center .passos-3-de-3{
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 28px;
+}
+.container-configurar-cartao-center h1{
+  font-weight: 500;
+}
+.container-configurar-cartao-center .cartoes-bandeiras{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 
+  margin-top: 15px;
+}
+.container-configurar-cartao-center .cartoes-bandeiras img{
+  width: 43px;
+  height: 26px;
+  margin-right: 4px;
+}
+.container-configurar-cartao-center .formulario-cartao{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
+  margin-top: 8px;
+}
+.container-configurar-cartao-center .formulario-cartao input{
+  height: 59px;
+  margin-bottom: 10px;
+  padding-left: 9px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.container-configurar-cartao-center .formulario-cartao .codigo-seguranca{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px #737373;
+  border-radius: 2px;
+}
+.container-configurar-cartao-center .formulario-cartao .codigo-seguranca span .icon{
+  font-size: 47px;
+  font-weight: 300;
+  margin-right: 3px;
+  opacity: 0.5;
+  display: block;
+}
+.container-configurar-cartao-center .formulario-cartao .codigo-seguranca .input-cod-seguranca{
+  margin: 0;
+  width: 100%;
+  border: none;
+}
+.container-configurar-cartao-center .forma-preferida{
+  margin-top: 23px;
+  font-weight: 400;
+}
+.container-configurar-cartao-center .container-chekbox{
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.container-configurar-cartao-center .container-chekbox input{
+   display: none;
+}
+
+.container-configurar-cartao-center .container-chekbox input + label::before{
+  content: '';
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background-color: transparent;
+  vertical-align: middle;
+  border: solid black 1px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.container-configurar-cartao-center .container-chekbox label{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 25px;
+  font-weight: bold;
+}
+.container-configurar-cartao-center .container-chekbox input:checked + label::after{
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #0071eb;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 5px;
+}
+.container-configurar-cartao-center .plano-escolhido{
+  margin-top: 27px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+.container-configurar-cartao-center .plano-escolhido .resumo-compra .plano-basico{
+  font-weight: 400;
+  color: #737373;
+  margin-top: 2px;
+}
+.container-configurar-cartao-center .plano-escolhido button{
+  border: none;
+  background-color: transparent;
+  color: #0071eb;
+  font-size: 16.5px;
+  font-weight: 500;
+}
+.container-configurar-cartao-center .plano-escolhido button:hover{
+  text-decoration: underline;
+}
+.container-configurar-cartao-center .info-1{
+  font-size: 13px;
+  margin-top: 22px;
+  color: #737373;
+  text-align: justify;
+}
+.container-configurar-cartao-center .info-2{
+  margin-top: 40px;
+  font-size: 13px;
+  color: #737373;
+  text-align: justify;
+}
+.container-configurar-cartao-center .bt-iniciar-associacao{
+  height: 67px;
+  width: 100%;
+  border: none;
+
+  background-color: #e50914;
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+  border-radius: 3.5px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.container-configurar-cartao-center .bt-iniciar-associacao:hover{
+  background-color: red;
+}
+/* ANIMAÇÃO CSS */
+.container-configurar-cartao .animation{
  
+  position: relative;
+  animation: deslocament;
+  animation-duration: .2s;
+  opacity: 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@keyframes deslocament {
+  from{
+    opacity: 1;
+    left: 0;
+  }
+  to{    
+    left: -35px;
+    opacity: 0;
+  }
+}
 
 /* section footer */
 
