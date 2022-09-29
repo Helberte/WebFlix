@@ -10,11 +10,8 @@ const forma_pagamento = require('./routes/forma_pagamento');
 const login = require('./routes/login');
 const planos = require('./routes/planos');
 const configurar_cartao = require('./routes/configurar_cartao');
-
 const criar_perfil = require('./routes/criar_perfil');
-
 const primeiro_acesso_criar_perfil = require('./routes/primeiro_acesso_criar_perfil');
-
 
 // configuração do nunjucks
 nunjucks.configure('views', {
