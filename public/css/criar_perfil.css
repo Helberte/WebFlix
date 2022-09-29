@@ -131,7 +131,7 @@
     padding: 15px 22px;
   }
 
-  img{
+  .logo{
     height: 40px;
     padding-left: 50px;
     padding-top: 15px;
@@ -179,46 +179,65 @@
     
   }
 
-  .bloco{
-    background-color: #737373;
-    height: 100px;
-    width: 100px;
+  .container{
+    max-width: 400px;
+	  margin: 0 auto;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item {
+    margin: 5px;
+    background: gray;
     text-align: center;
+    font-size: 1.5em;
+
+    width: 100px;
+    height: 100px;
+  }
+
+  .container .item-logo{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5%;
-    
   }
 
-  .box{
-    height: 100px;
-    width: 100px;
-    text-align: center;
-    display: flex;
+  .item .icon{
+    display: inline-block;
+  }
+
+  .container .item-texto{
+    background-color: black;
+  }
+  
+  .container .item-textox{
+    background-color: black;
+    width: 120px;
+  }
+
+  .texto{
+    color: white;
+    font-size: 15px;
+  }
+
+  .textox{
+    padding-left: 9px;
+    color: white;
+    font-size: 15px;
+  }
+
+  .item .imag{
+    height: 100%;
+    width: 100%;
+    border-color: white;
     align-items: center;
-    justify-content: center;
-    border-radius: 5%;
-  }
-
-  .imag{
-    height: 100px;
-    width: 100px;
-  }
-
-  h5{
-    color:#737373;
-    padding-top: 5px;
   }
 
   h1{
     color:white;
   }
-
-.adicionar{
-  background-color: #a3a3a3;
-}
-
-tr{
-  margin-bottom: 40px;
-}
