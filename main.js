@@ -12,6 +12,7 @@ const planos = require('./routes/planos');
 const configurar_cartao = require('./routes/configurar_cartao');
 const criar_perfil = require('./routes/criar_perfil');
 const primeiro_acesso_criar_perfil = require('./routes/primeiro_acesso_criar_perfil');
+const adicionar_perfil = require('./routes/adicionar_perfil');
 
 // configuração do nunjucks
 nunjucks.configure('views', {
@@ -38,6 +39,8 @@ app.use(configurar_cartao);
 app.use(criar_perfil);
 
 app.use(primeiro_acesso_criar_perfil);
+
+app.use(adicionar_perfil);
 
 
 app.listen(8000, erro => {

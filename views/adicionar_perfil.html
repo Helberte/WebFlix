@@ -11,40 +11,47 @@
     
     <div class="cabecalho">
         <!-- cabeçalho -->    
-        <header>
-            <img class="logo" src="img/logo.png" alt="Imagem logo Netflix">     
-        </header>
     </div>
 
     <div id="back">
 
-        <div id="centro">
-            <h1>Quem está assitindo?</h1>
+        <div class="centro">
+            <h1>Adicionar perfil</h1>
+            <p class="subtitulo">Adicione um perfil na Netflix para outra pessoa.</p>
+
+            <hr>
 
             <section class="container flex">
                 
                 <div class="item">
                     <img class="imag" src="https://occ-0-3256-448.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY5cwIbM7shRfcXmfQg98cqMqiZZ8sReZnj4y_keCAHeXmG_SoqLD8SXYistPtesdqIjcsGE-tHO8RR92n7NyxZpqcFS80YfbRFz.png?r=229" alt="">
                 </div>
-                <div class="item">
-                    <img class="imag" src="https://occ-0-3256-448.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABTM4esTewNYvG8POCkUSycJ63_R06Jjn3eBu4lQVwBPJ9BnC_37NHde6S1mhrGHx2AhoEUkvXkj6bJlQY-P4HmKlu5MjZra5MHjz.png?r=1b8" alt="">
+
+                <input class="nome" type="text" placeholder="Nome">
+                
+                <div class="infantil">
+                    <input type="checkbox" id="infantil" name="infantil" checked> 
+                    <p class="texto">Criança?</p>                    
                 </div>
-                <div class="item item-logo">
-                        <ion-icon class="icon" name="add-circle-outline"></ion-icon>
+
+                <div>
+                    
                 </div>
+
             </section>
+
+            <hr>
 
             <section class="container flex">
                 
-                <div class="item item-texto">
-                   <p class="textox">Helberte</p>
-                </div>
-                <div class="item item-texto">
-                    <p class="textox">Infantil</p>
-                </div>
-                <div class="item item-textox">
-                    <p class="texto">Adicionar perfil</p>
-                </div>
+                <button class="continuar" type="button">
+                    Continuar
+                </button>
+
+                <button class="cancelar" type="button">
+                    Cancelar
+                </button>
+
             </section>
         </div>
     
