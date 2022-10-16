@@ -3,7 +3,6 @@ const app = express();
 const nunjucks = require('nunjucks');
 
 // rotas
-// rotas
 const create_login = require('./routes/create_login');
 const adicionar_perfil = require('./routes/adicionar_perfil');
 
@@ -21,13 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // uso das rotas
 app.use(create_login);
-
-// app.use(criar_perfil);
-
-// app.use(primeiro_acesso_criar_perfil);
-
 app.use(adicionar_perfil);
-
 
 
 app.listen(5000, erro => {
