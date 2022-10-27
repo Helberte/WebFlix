@@ -107,4 +107,58 @@
     align-items: center;
   }
 
+  .centro .titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+  }
+
+  .titulo h1{
+    color: white;
+    margin-bottom: 5px;
+  }
+  .titulo p {
+    color: gray;
+    margin-bottom: 3px;
+  }
+
+.container .continuar {
+  margin-right: 10px;
+  border: solid 1px;
+  border-radius: 7%;
+  font-size: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 10%;
+  background-color: red; 
+}
+
+.container .cancelar {
+  margin-left: 10px;
+  border: solid 1px;
+  border-color: gray;
+  border-radius: 7%;
+  font-size: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 10%;
+  background-color: black;
+}
+
+.continuar p {
+  color: white;
+
+}
+
+.cancelar p {
+  color: gray;
+}
  
+.centro {
+  
+}
