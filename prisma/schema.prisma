@@ -1,6 +1,15 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+// TIPOS
+// https://www.prisma.io/docs/concepts/database-connectors/mysql
+
+// TIPOS
+// https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#model-field-scalar-types
+
+// RELACIONAMENTOS
+// https://www.prisma.io/docs/concepts/components/prisma-schema/relations
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -10,36 +19,52 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Genero{
+model Genero {
   id Int @id @default(autoincrement())
   nome String @db.VarChar(255)
 }
 
-model Elenco{
-  id Int @id @default(autoincrement())
-  nome String @db.VarChar(300)
-  sobrenome String? @db.VarChar(300)
-  foto String? @db.VarChar(1000)
+model Elenco {
+  id            Int @id @default(autoincrement())
+  nome          String @db.VarChar(300)
+  sobrenome     String? @db.VarChar(300)
+  foto          String? @db.VarChar(1000)
 }
-model Filme{
-  id Int @id @default(autoincrement())
-  titulo String @db.VarChar(1000)
-  subtitulo String? @db.VarChar(1000)
-  sinopse String? @db.VarChar(1000)
-  imagem_capa String @db.VarChar(1000)
-  duracao String @db.VarChar(20)
-  faixa_idade String @db.VarChar(20)
-  ano String? @db.VarChar(10)
+
+model Filme {
+  id            Int @id @default(autoincrement())
+  titulo        String @db.VarChar(1000)
+  subtitulo     String? @db.VarChar(1000)
+  sinopse       String? @db.VarChar(1000)
+  imagem_capa   String @db.VarChar(1000)
+  duracao       String @db.VarChar(20)
+  faixa_idade   String @db.VarChar(20)
+  ano           String? @db.VarChar(10)
 }
-model Cenas_momentos{
-  id Int @id @default(autoincrement())
-  nome String @db.VarChar(500)
+
+model CenaMomento {
+  id            Int @id @default(autoincrement())
+  nome          String @db.VarChar(500)
+
+  @@map("cenas_momentos")
 }
-model Planos{
-  id Int @id @default(autoincrement())
-  resolucao String @db.VarChar(100)
-  qualidade_video String @db.VarChar(100)
-  acessibilidade String? @db.VarChar(100)
-  preco Decimal
-  nome String @db.VarChar(500)
+
+model Plano {
+  id                Int @id @default(autoincrement())
+  resolucao         String @db.VarChar(100)
+  qualidade_video   String @db.VarChar(100)
+  acessibilidade    String? @db.VarChar(100)
+  preco             Decimal
+  nome              String @db.VarChar(500)
+  usuario           Usuario[]
+
+  @@map("planos")
+}
+
+model Usuario {
+  id                Int @id @default(autoincrement())
+  email             String @db.VarChar(500)
+  senha             String @db.VarChar(1000)
+  plano             Plano? @relation(fields: [fk_plano_id], references: [id])
+  fk_plano_id       Int?
 }
