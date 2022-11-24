@@ -20,15 +20,19 @@ datasource db {
 }
 
 model Genero {
-  id Int @id @default(autoincrement())
-  nome String @db.VarChar(255)
+  id              Int @id @default(autoincrement())
+  nome            String @db.VarChar(255)
+
+  genero_filme    GeneroFilme[]
 }
 
 model Elenco {
-  id            Int @id @default(autoincrement())
-  nome          String @db.VarChar(300)
-  sobrenome     String? @db.VarChar(300)
-  foto          String? @db.VarChar(1000)
+  id                      Int @id @default(autoincrement())
+  nome                    String @db.VarChar(300)
+  sobrenome               String? @db.VarChar(300)
+  foto                    String? @db.VarChar(1000)
+
+  elenco_participa_filme  ElencoParticipaFilme[]
 }
 
 model Filme {
@@ -40,6 +44,11 @@ model Filme {
   duracao       String @db.VarChar(20)
   faixa_idade   String @db.VarChar(20)
   ano           String? @db.VarChar(10)
+
+  cenas_momentos_filme    CenasMomentosFilme[]
+  perfil_assiste_filme    PerfilAssisteFilme[]
+  elenco_participa_filme  ElencoParticipaFilme[]
+  genero_filme            GeneroFilme[]
 }
 
 model CenaMomento {
@@ -47,6 +56,8 @@ model CenaMomento {
   nome          String @db.VarChar(500)
 
   @@map("cenas_momentos")
+
+  cenas_momentos_filme  CenasMomentosFilme[]
 }
 
 model Plano {
@@ -63,8 +74,79 @@ model Plano {
 
 model Usuario {
   id                Int @id @default(autoincrement())
-  email             String @db.VarChar(500)
+  email             String @db.VarChar(500) @unique
   senha             String @db.VarChar(1000)
+
   plano             Plano? @relation(fields: [fk_plano_id], references: [id])
   fk_plano_id       Int?
+
+  perfis            Perfil[]
+  cartoes           Cartao[]
+}
+
+model Perfil {
+  id                    Int @id @default(autoincrement())
+  foto                  String? @db.VarChar(1000)
+  nome                  String @db.VarChar(500)
+
+  usuario               Usuario @relation(fields: [fk_usuario_id], references: [id])
+  fk_usuario_id         Int
+  
+  perfil_assiste_filme  PerfilAssisteFilme[]
+}
+
+model Cartao {
+  id                  Int @id @default(autoincrement())
+  numero              String @db.VarChar(15)
+  primeiro_nome       String @db.VarChar(500)
+  sobrenome           String @db.VarChar(600)
+  data_expiracao      String @db.VarChar(10)
+  codigo_seguranca    String @db.VarChar(10)
+
+  usuario             Usuario @relation(fields: [fk_usuario_id], references: [id])
+  fk_usuario_id       Int
+}
+
+model CenasMomentosFilme {
+  @@map("cenas_momentos_filme")
+
+  id                    Int @id @default(autoincrement())
+
+  cenas_momentos        CenaMomento @relation (fields: [fk_cenas_momentos_id], references: [id])
+  fk_cenas_momentos_id  Int
+  filmes                Filme @relation (fields: [fk_filmes_id], references: [id])   
+  fk_filmes_id          Int        
+}
+
+model PerfilAssisteFilme {
+  @@map("perfil_assiste_filme")
+
+  id                    Int @id @default(autoincrement())
+
+  filmes                Filme @relation (fields:[fk_filmes_id], references: [id])
+  fk_filmes_id          Int
+  perfil                Perfil @relation (fields: [fk_perfil_id], references: [id])
+  fk_perfil_id          Int
+}
+
+model ElencoParticipaFilme {
+  @@map("elenco_participa_filme")
+
+  id                    Int @id @default(autoincrement())
+
+  elenco                Elenco @relation(fields: [fk_elenco_id], references: [id])
+  fk_elenco_id          Int
+  filmes                Filme @relation (fields: [fk_filme_id], references: [id])
+  fk_filme_id           Int   
+}
+
+model GeneroFilme {
+  @@map("genero_e_filme")
+
+  id                    Int @id @default(autoincrement())
+
+  genero                Genero @relation(fields: [fk_genero_id], references: [id])
+  fk_genero_id          Int
+  filme                 Filme @ relation (fields: [fk_filme_id], references: [id])
+  fk_filme_id           Int  
 }
