@@ -1,5 +1,5 @@
 -- CreateTable
-CREATE TABLE `Planos` (
+CREATE TABLE `planos` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `resolucao` VARCHAR(100) NOT NULL,
     `qualidade_video` VARCHAR(100) NOT NULL,
