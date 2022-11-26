@@ -10,7 +10,8 @@
 }
 body{
   background-color: #141414;
-  height: 2500px;
+  width: 100vw;
+  overflow-x: hidden;
 }
 .navigation-main{
   height: 80px;
@@ -24,6 +25,7 @@ body{
   align-items: center;
   padding: 0 50px;
   background: linear-gradient(to bottom, rgba(1,1,1,0.7) 5%, transparent 95%);  
+  z-index: 999;
 }
 
 .opc-left,
@@ -203,7 +205,7 @@ body{
   height: 105vh;
   /* background-image: url("https://occ-0-3256-1380.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABdbJkYvbLTKI3xxx3LY_h-jn2I7ZOykkl0qe-FRzaM4QS3r1TXy8vumVPKGYZBcyBN_dEG8QYMVmrDgsm-aJ08UFTarPUVrF5q-V.webp?r=7b8"); */
   /* background-image: url("https://occ-0-3256-1380.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABSSAWNU31NVHfY6F2qLZltcE1IF28JoDRDzgVs-SD7SLorpKYVjcWUdhsLfZDk7aWu1sXIySQOR2zwsCg9Jf_dRfVk-ETQrNCrix.webp?r=b52"); */
-  background-image: url("https://occ-0-3256-1380.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABcyzwGeNrcZS7wRoaO1F4skJH34rngDwE7cOLjtsaYrNepcQFHRWRUuhKKI7tzvvSDuzc9kY68DtkVvcU-qf7X0QHq7ScS3d_U7J.webp?r=af8");
+  background-image: url("https://occ-0-3256-1380.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABYzkav8DOOaSt_TaUx1CGEDxdrjplB6Gbu3WqcDAa7LIykxCAZIAiyGvwGBw5SY_2Wfj9R-OHcpBHDJC8w5__B8l4qsgtJxOp7l5.webp?r=281");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -232,9 +234,12 @@ body{
 }
 .column-left-info-filme .title{
   margin: 25% 0 0 -10px;
-  font-size: 85px;
-  display: block;
+  font-size:  63px;
+  display: flex;
   font-weight: 500;
+  text-transform: uppercase;
+  height: 170px;
+  width: 100%;
 }
 
 .column-left-info-filme .description{
@@ -301,23 +306,145 @@ body{
 
 /* catalogo */
 
+#catalog-id-first{
+  margin-top: -240px;
+}
 
 .catalog-scroll-main{
-  border: solid white 2px;
-  height: 200px;
+  height: 180px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;  
+  align-items: flex-start;
+  justify-content: center;
   color: white;
   padding: 0 0 0 47px;
 }
 .catalog-scroll-main .catalog-category{
   font-size: 20px;
   font-weight: 500;
-  margin-bottom: 10px;
+  height: 38px;
 }
 .catalog-scroll-main .catalog-scrool-filmes{
   display: flex;
-  border: yellow 2px solid;
+  height: 100%;
+  width: 95vw;
+  position: relative;
+}
+
+
+
+
+
+
+/*  botão left */
+
+.catalog-scroll-main .catalog-scrool-filmes .bottom-scrool-left{
+  background-color: transparent;
+  z-index: 900;
+  height: 125px;
+  width: 55px;
+  position: absolute;
+  left: -15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .2s ease-in;
+}
+.catalog-scroll-main .catalog-scrool-filmes .bottom-scrool-left:hover .icon{
+  transform: scale(1.25);
+}
+.catalog-scroll-main .catalog-scrool-filmes .bottom-scrool-left:hover{
+  background-color: rgba(0, 0,0,0.2);
+}
+.catalog-scroll-main .catalog-scrool-filmes .bottom-scrool-left .icon{
+  color: white;
+  font-size: 60px;
+  display: block;
+  transition: all .2s ease;
+}
+.catalog-scroll-main .catalog-scrool-filmes .bottom-scrool-left,
+.catalog-scroll-main .catalog-scrool-filmes .bottom-scrool-rigth{
+  display: none;
+}
+
+.catalog-scroll-main .catalog-scrool-filmes:hover .bottom-scrool-left,
+.catalog-scroll-main .catalog-scrool-filmes:hover .bottom-scrool-rigth{
+  display: flex;  
+}
+
+/* botão right */
+
+.bottom-scrool-rigth{ 
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  z-index: 900;
+  height: 125px;
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .2s ease-in;  
+}
+.bottom-scrool-rigth:hover .icon{
+  transform: scale(1.25);
+}
+.bottom-scrool-rigth:hover{
+  background-color: rgba(0, 0,0,0.2);
+}
+.bottom-scrool-rigth .icon{
+  color: white;
+  font-size: 60px;
+  display: block;
+  transition: all .2s ease;  
+}
+
+
+
+
+.catalog-scroll-main .catalog-scrool-filmes .catalog-filmes{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: auto;
+  transition: .3s ease all; 
+}
+.catalog-scrool-filmes .catalog-filmes .filme{
+  height: 125px;
+  width: 220px;
+  transform: scale(0.97);
+  transition: all .3s ease;
+}
+.catalog-scrool-filmes .catalog-filmes .filme:hover{
+  transform: scale(1.08);
+  z-index: 888;
+}
+.catalog-scroll-main .catalog-scrool-filmes .catalog-filmes .filme img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+/* Rodapé */
+
+footer{
+  height: 200px;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+}
+footer p{
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 40px;
 }
