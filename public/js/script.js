@@ -30,6 +30,7 @@ const bt_escolha_seu_plano_proximo = document.getElementById('bt-escolha-seu-pla
 const bt_planos_proximo = document.getElementById('bt-planos-proximo');
 const forma_pagamento_1 = document.getElementById('forma-paramento-1');
 const bt_iniciar_associacao = document.getElementById('bt-iniciar-associacao');
+const bt_criar_perfil_primeiro_acesso = document.getElementById('bt-criar-perfil-primeiro-acesso');
 const container_configurar_cartao_center= document.getElementsByClassName('container-configurar-cartao-center')[0];
 
 if(bt_vamos_la){
@@ -71,6 +72,13 @@ if(bt_planos_proximo){
 if(forma_pagamento_1){
   forma_pagamento_1.addEventListener('click', () => {
     window.location = '/configurarcartao';
+  });
+}
+
+
+if(bt_criar_perfil_primeiro_acesso){
+  bt_criar_perfil_primeiro_acesso.addEventListener('click', () => {
+    window.location = '/homecatalog';
   });
 }
 

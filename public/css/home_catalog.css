@@ -8,7 +8,10 @@
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
 }
-
+body{
+  background-color: #141414;
+  height: 2500px;
+}
 .navigation-main{
   height: 80px;
   width: 100%;
@@ -100,7 +103,8 @@
 .opc-rigth .dropdown-menu .li-img-perfil{
   position: relative;
 }
-.opc-rigth .dropdown-menu .li-img-perfil:hover ul{
+.opc-rigth .dropdown-menu .li-img-perfil:hover ul,
+.opc-rigth .dropdown-menu .li-img-perfil:hover .seta-cima{
   display: block;
 }
 .opc-rigth .dropdown-menu ul{
@@ -169,25 +173,26 @@
   border-top: 6px solid white;
   border-right: 6px solid transparent;
   position: absolute;
-  right: 5px;
+  right: 0;
   top: 48%;
+  transition: .3s ease all;
+}
+.opc-rigth .dropdown-menu .li-img-perfil .seta-cima{
+  display: none;
+  border-left: 7.5px solid transparent;
+  border-bottom: 7.5px solid white;
+  border-right: 7.5px solid transparent;  
+  border-top: 7.5px solid transparent;
+  position: absolute;
+  top:100%;
+  right: 55%;
+}
+.opc-rigth .dropdown-menu .li-img-perfil:hover .seta-cima-baixo{
+  transform: rotate(3.142rad);
 }
 .opc-rigth .dropdown-menu ul{
   display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .navigation-main .opc-left .img-logo img{
   height: 100%;
@@ -196,8 +201,123 @@
 }
 .image-banner-background{
   height: 105vh;
-  background-image: url("https://occ-0-3256-1380.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABdbJkYvbLTKI3xxx3LY_h-jn2I7ZOykkl0qe-FRzaM4QS3r1TXy8vumVPKGYZBcyBN_dEG8QYMVmrDgsm-aJ08UFTarPUVrF5q-V.webp?r=7b8");
+  /* background-image: url("https://occ-0-3256-1380.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABdbJkYvbLTKI3xxx3LY_h-jn2I7ZOykkl0qe-FRzaM4QS3r1TXy8vumVPKGYZBcyBN_dEG8QYMVmrDgsm-aJ08UFTarPUVrF5q-V.webp?r=7b8"); */
+  /* background-image: url("https://occ-0-3256-1380.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABSSAWNU31NVHfY6F2qLZltcE1IF28JoDRDzgVs-SD7SLorpKYVjcWUdhsLfZDk7aWu1sXIySQOR2zwsCg9Jf_dRfVk-ETQrNCrix.webp?r=b52"); */
+  background-image: url("https://occ-0-3256-1380.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABcyzwGeNrcZS7wRoaO1F4skJH34rngDwE7cOLjtsaYrNepcQFHRWRUuhKKI7tzvvSDuzc9kY68DtkVvcU-qf7X0QHq7ScS3d_U7J.webp?r=af8");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.div-gradient-left{
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to right, rgba(1,1,1,0.5) 15%, transparent 85%);
+}
+.div-gradient-bottom{
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to top, rgb(20, 20, 20), transparent 13%);
+}
+
+/*  titulo do filme */
+
+.column-left-info-filme{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  color: white;
+  padding: 0 0 0 50px;
+  flex-direction: column;
+}
+.column-left-info-filme .title{
+  margin: 25% 0 0 -10px;
+  font-size: 85px;
+  display: block;
+  font-weight: 500;
+}
+
+.column-left-info-filme .description{
+  margin: 15px 0 0 -4px;
+  width: 75%;
+  font-size: 17px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+}
+.column-left-info-filme .bts-info{
+  margin: 20px 0 0 -4px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+
+}
+.column-left-info-filme .bts-info .bt-assistir{
+  width: 140px;
+  height: 42px;
+  border-radius: 4px;
+  border: none;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.column-left-info-filme .bts-info .bt-assistir:hover{
+  background-color: rgba(255,255,255,0.7);
+}
+.column-left-info-filme .bts-info .bt-assistir .icon{
+  font-size: 30px;
+  display: block;
+}
+.column-left-info-filme .bts-info .bt-mais-info{
+  width: 200px;
+  height: 100%;
+  margin-left: 15px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #67747f;
+  color: white;
+}
+.column-left-info-filme .bts-info .bt-mais-info:hover{
+  background-color: rgba(103, 116, 127,0.5);
+}
+.column-left-info-filme .bts-info .bt-mais-info .icon{
+  font-size: 30px;
+  display: block;
+  margin-right: 5px;
+}
+
+/* catalogo */
+
+
+.catalog-scroll-main{
+  border: solid white 2px;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  
+  color: white;
+  padding: 0 0 0 47px;
+}
+.catalog-scroll-main .catalog-category{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.catalog-scroll-main .catalog-scrool-filmes{
+  display: flex;
+  border: yellow 2px solid;
 }
