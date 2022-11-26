@@ -2,6 +2,73 @@
 
 
 {% block content %}
-  <h1>Catalogo Webflix</h1>
+
+  <nav class="navigation-main">
+
+    <div class="opc-left">
+      <div class="img-logo">
+        <img src="img/logo.png" alt="logo netflix">
+      </div>
   
+      <ul class="menu-main">
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Séries</a></li>
+        <li><a href="#">Filmes</a></li>
+        <li><a href="#">Bombando</a></li>
+        <li><a href="#">Minha Lista</a></li>
+        <li><a href="#">Navegar por idiomas</a></li>
+      </ul>
+    </div>
+    
+    <div class="opc-rigth">
+      <!-- <span class="lupa">
+        <ion-icon name="search-outline"></ion-icon>
+      </span>
+   -->
+      <form class="form-busca-filme" action="#" method="POST">
+        <div class="center-input">
+          <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
+          <input type="text" autofocus class="busca-filme" maxlength="50" autocomplete="on" placeholder="Títulos, gente e gêneros">
+        </div>
+      </form>
+  
+      <span class="notifications">
+        <ion-icon class="icon-notifications" name="notifications-outline"></ion-icon>
+      </span>
+  
+      <ul class="dropdown-menu">
+        <li class="li-img-perfil"><!--Imagem do perfil--> <img src="https://occ-0-3256-1380.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABeCYBRfS2336A00ucH9JXNGW2HV1kmWM3MLLVpXGUB9pgL_ighzzI7SOJ97q7aaeRz3DhS1vObomq1i872EivktRGdB1mfk.png?r=f45" alt="Imagem Perfil"> 
+          <div class="seta-cima-baixo"></div>
+        
+          <ul>
+            <li>
+              <a href="#"><span><img src="https://occ-0-3256-1380.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABVmx9oGm5_dAzcKXK3VTcfVCuIPVm-bBkF4OFQ3XC6ygWNG1A-Fe15PmYc8pGYZu1K3dMMrgM5GETNyW2Aeq55MPWHPhQQQ.png?r=b39" alt="Imagem perfil"></span> 
+                Outro perfil
+              </a>
+            </li>                    
+            <li>
+              <a href="#"><span><ion-icon name="pencil-outline"></ion-icon></span>Gerenciar perfis</a>
+            </li>
+            <li>
+              <a href="#"><span><ion-icon name="people-circle-outline"></ion-icon></span>Transferir perfil</a>
+            </li>
+            <li><a href="#"><span><ion-icon name="person-outline"></ion-icon></span>Conta</a></li>
+            <li><a href="#"><span><ion-icon name="help-circle-outline"></ion-icon></span>Central de ajuda</a></li>
+            <li class="li-sair-netflix"><a href="#">Sair da Netflix</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <div class="image-banner-background">
+    <div class="div-gradient-left">
+      <div class="div-gradient-bottom">
+
+
+      </div>
+    </div>
+  </div>
+
 {% endblock %}

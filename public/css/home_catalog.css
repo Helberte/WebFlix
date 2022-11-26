@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 *{
   margin: 0;
@@ -7,4 +7,197 @@
   list-style: none;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
+}
+
+.navigation-main{
+  height: 80px;
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: linear-gradient(to bottom, rgba(1,1,1,0.7) 5%, transparent 95%);  
+}
+
+.opc-left,
+.opc-rigth{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.opc-left .img-logo{
+  height: 100%;
+  width: 110px;
+}
+.opc-left .menu-main{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 35px;
+}
+.opc-left .menu-main li a{
+  color: white;
+  padding-right: 17px;
+  font-size: 14px;
+  font-weight: 300;
+  transition: all .3s ease;
+}
+.opc-left .menu-main li a:hover{
+  color: rgba(255,255,255, 0.6);
+}
+.opc-rigth{
+  align-items: center;
+}
+.opc-rigth .form-busca-filme .center-input{
+  border: white 1.5px solid;
+  background-color: rgba(0, 0,0, 0.6);
+  height: 37px;
+  width: 270px;
+  display: flex;
+  flex-direction: row;
+}
+.opc-rigth .form-busca-filme .center-input button{
+  color: white;
+  background-color: transparent;
+  height: 100%;
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  margin-right: 7px;
+  border: none;
+  padding: 0 3px;
+}
+.opc-rigth .form-busca-filme .center-input input{
+  outline: 0;
+  background-color: transparent;
+  color: white;
+  border: none;
+  height: 100%;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 300;
+}
+.opc-rigth .form-busca-filme .center-input input::placeholder{
+  color: rgba(255,255,255,0.7);
+}
+.opc-rigth .notifications .icon-notifications{
+  color: white;
+  font-size: 25px;
+  padding: 0 23px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+
+.opc-rigth .dropdown-menu .li-img-perfil{
+  position: relative;
+}
+.opc-rigth .dropdown-menu .li-img-perfil:hover ul{
+  display: block;
+}
+.opc-rigth .dropdown-menu ul{
+  position: absolute;
+  border: 1px rgb(42, 42,42) solid;
+  right: 0;
+  top: 53px;
+  width: 223px;
+  background-color: rgba(0, 0,0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 18px 0 0 0;
+}
+.opc-rigth .dropdown-menu ul li{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0 13px;
+}
+.opc-rigth .dropdown-menu ul li a{
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 13px;
+}
+.opc-rigth .dropdown-menu ul li a:hover{
+  text-decoration: underline;
+}
+.opc-rigth .dropdown-menu ul li a span{  
+  width: 36px;
+  font-size: 25px;
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  margin-right: 5px;
+}
+.opc-rigth .dropdown-menu ul li a img {
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+.opc-rigth  .li-img-perfil{
+  height: 37px;
+  width: 60px;
+  
+}
+.opc-rigth .dropdown-menu li img{
+  display: block;
+  object-fit: cover;
+  border-radius: 5px;
+  height: 100%;
+}
+.opc-rigth .dropdown-menu ul .li-sair-netflix{
+  border-top: 1px rgb(42, 42,42) solid;
+  height: 55px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.opc-rigth .dropdown-menu li .seta-cima-baixo{
+  border-left: 6px solid transparent;
+  border-top: 6px solid white;
+  border-right: 6px solid transparent;
+  position: absolute;
+  right: 5px;
+  top: 48%;
+}
+.opc-rigth .dropdown-menu ul{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navigation-main .opc-left .img-logo img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.image-banner-background{
+  height: 105vh;
+  background-image: url("https://occ-0-3256-1380.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABdbJkYvbLTKI3xxx3LY_h-jn2I7ZOykkl0qe-FRzaM4QS3r1TXy8vumVPKGYZBcyBN_dEG8QYMVmrDgsm-aJ08UFTarPUVrF5q-V.webp?r=7b8");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
