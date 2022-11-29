@@ -41,3 +41,21 @@ function to_right(){
   }
   list_films.style.marginLeft = valor_left + 'px';
 }
+
+// configuração do modal
+
+
+var fade = document.getElementById('id-fade');
+var modal = document.getElementById('id-modal');
+var bt_sair = document.getElementById('bt-sair');
+var bt_add_filme = document.getElementById('li-add-filme');
+
+
+var toggleHide = function(){
+  [fade, modal].forEach((el) => el.classList.toggle('hide'));
+}
+
+bt_add_filme.addEventListener('click', toggleHide);
+bt_sair.addEventListener('click', toggleHide);
+fade.addEventListener('click', toggleHide);
+
