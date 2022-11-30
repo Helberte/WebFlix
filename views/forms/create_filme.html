@@ -1,6 +1,7 @@
-<div id="id-fade" class="fade"></div>
-<div id="id-modal" class="modal-form-filme">
-  <form class="form-add-filme" action="#" method="POST">
+<div id="id-fade" class="fade hide"></div>
+<div id="id-modal" class="modal-form-filme hide">
+  
+  <form class="form-add-filme" action="/filme_create" method="post" enctype="multipart/form-data">
     <header>
       <p>Adicione um novo filme</p>
       <span id="bt-sair"><ion-icon class="icon" name="close-outline"></ion-icon></span>
@@ -8,13 +9,20 @@
     <main class="form-main-add-filme">
       <div class="form-filme-basic">
         <div class="column-left">
-          <input type="text" name="titulo" id="titulo" maxlength="20" required autofocus autocomplete="on" placeholder="Titulo do filme (Nome)">
+          <input type="text" name="titulo" id="titulo" maxlength="100" required autofocus autocomplete="on" placeholder="Titulo do filme (Nome)">
 
-          <input type="text" placeholder="Subtítulo" name="subtitulo" id="subtitulo" maxlength="20" required autocomplete="on">
+          <input type="text" placeholder="Subtítulo" name="subtitulo" id="subtitulo" maxlength="50" required autocomplete="on">
         </div>
         <div class="column-right">
-          <img id="img_filme" src="img/filmes/1.webp" alt="Imagem do filme">
-          <button>Escolher Imagem</button>
+          <img id="img_filme" src="img/fundo.png" alt="">
+
+          <div class="imagem-filme-posicao">            
+            <input type="file" id="imgem-filme" name="image">
+            <label class="label-imagem" for="imgem-filme">Escolher imagem</label>
+          </div>
+          
+          <input type="text" name="nome_image" id="nome_image">
+         
         </div>        
       </div>
       <label class="sinopse" for="sinopse" id="sinopse">Sinopse</label>

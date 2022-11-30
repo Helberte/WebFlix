@@ -6,6 +6,7 @@ const nunjucks = require('nunjucks');
 const create_login = require('./routes/create_login');
 const adicionar_perfil = require('./routes/adicionar_perfil');
 const home_catalog = require('./routes/home_page_catalog');
+const create_filme = require('./routes/create_filme');
 
 // configuração do nun jucks
 nunjucks.configure('views', {
@@ -23,6 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(create_login);
 app.use(adicionar_perfil);
 app.use(home_catalog);
+app.use(create_filme);
 
 app.listen(8000, erro => {
 

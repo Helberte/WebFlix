@@ -618,19 +618,40 @@ footer p{
   border-radius: 7px;
   object-fit: cover;
 }
-.form-main-add-filme .form-filme-basic .column-right button{
-  margin-top: 12px;
-  background-color: rgb(68,66,65);
-  border: solid 1px rgb(162, 162, 161);
-  height: 32px;
-  width: 150px;
-  border-radius: 5px;
-  color: white;
-  transition: all ease 0.3s;
-  cursor: pointer;
+
+.form-main-add-filme .form-filme-basic .column-right .imagem-filme-posicao{
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
-.form-main-add-filme .form-filme-basic .column-right button:hover{
-  background-color:  rgba(68,66,65,0.5);
+.form-main-add-filme .form-filme-basic .column-right .imagem-filme-posicao label{
+  border: solid 1px rgba(90, 90, 90, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;  
+  transition: all ease 0.3s;
+  font-weight: 200;
+  background-color: rgba(20, 20, 20,0.2);
+  color: white;
+  font-size: 14px;
+  height: 35px;
+  width: 180px;
+}
+#nome_image{
+  display: none;
+}
+.form-main-add-filme .form-filme-basic .column-right .imagem-filme-posicao label:hover{
+  border: solid 1px rgba(255, 255, 255, 0.6);
+}
+.form-main-add-filme .form-filme-basic .column-right .imagem-filme-posicao label:active{
+  transform: scale(1.05);
+}
+#imgem-filme{
+  display: none;
 }
 .form-main-add-filme .sinopse{
   font-size: 18px;
