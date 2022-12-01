@@ -82,67 +82,61 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- catalogo -->
-  <div id="catalog-id-first" class="catalog-scroll-main">
-    <p class="catalog-category">Categoria de filme</p>
-    <div onmouseover="mouse_sobre(this,1);" onmouseout="mouse_saiu(this,1);" class="catalog-scrool-filmes">
+  <!-- posicionador -->
+  <div id="catalog-id-first" ></div>
+ 
+  <!-- variavel para controlar se existe pelo menos um filme da categoria comparada -->
+  {% set existe_filme = 0 %}
 
-      <div onclick="to_left();" class="bottom-scrool-left">
-        <span><ion-icon class="icon" name="chevron-back-outline"></ion-icon></span>
-      </div>
-      <div onclick="to_right();" class="bottom-scrool-rigth">
-        <span><ion-icon class="icon" name="chevron-forward-outline"></ion-icon></span>
-      </div>
+  {% for categoria in categorias %} <!-- roda todas as categorias -->
+  
+    <!-- roda todos os filmes -->
+    {% for filme in filmes %} 
+   
+      <!-- verifica se existe pelo menos um filme da categoria atual -->
+      {% if filme.genero_filme[0].genero.nome == categoria.nome %}
 
-      <div id="1" class="catalog-filmes">
-        
-        <div class="filme">
-          <img src="img/filmes/1.webp" alt="filme 1">
+      <!-- caso exista, seta a vatiavel para 1 -->
+        {% set existe_filme = 1 %}
+      {% endif %}
+
+    {% endfor %} 
+
+    <!-- só cria uma nova categoria caso exista algum filme nela -->
+    {% if existe_filme == 1 %}
+
+      <!-- retorna a variavel para 0 para evitar que as demais categorias vazias sejam criadas -->
+      {% set existe_filme = 0 %} 
+      <div class="catalog-scroll-main">
+        <p class="catalog-category">{{ categoria.nome }}</p>
+
+        <div onmouseover="mouse_sobre(this, 1);"  onmouseout="mouse_saiu(this,1);" class="catalog-scrool-filmes">
+
+          <div onclick="to_left();" class="bottom-scrool-left">
+            <span><ion-icon class="icon" name="chevron-back-outline"></ion-icon></span>
+          </div>
+          <div onclick="to_right();" class="bottom-scrool-rigth">
+            <span><ion-icon class="icon" name="chevron-forward-outline"></ion-icon></span>
+          </div>
+
+          <!-- faz um loop nos filmes e adiciona todos que tem a mesma categoria em questão -->
+          {% for filme in filmes %}
+            {% if filme.genero_filme[0].genero.nome == categoria.nome %}
+
+              <div id="1" class="catalog-filmes">          
+                <div class="filme">
+                  <img src="img/filmes/{{ filme.imagem_capa }}" alt="filme 1">
+                </div>          
+              </div>
+
+            {% endif %}
+          {% endfor %}
         </div>
-        <div class="filme">
-          <img src="img/filmes/a.webp" alt="filme 1">
-        </div>
-        <div class="filme">
-          <img src="img/filmes/b.webp" alt="filme 1">
-        </div>
-        <div class="filme">
-          <img src="img/filmes/c.webp" alt="filme 1">          
-        </div>
-        <div class="filme">
-          <img src="img/filmes/e.webp" alt="filme 1">          
-        </div>
-        <div class="filme">
-          <img src="img/filmes/f.jpg" alt="filme 1">
-        </div>
-        <div class="filme">
-          <img src="img/filmes/a.webp" alt="filme 1">
-        </div>
-        <div class="filme">
-          <img src="img/filmes/g.webp" alt="filme 1">
-        </div>
-        <div class="filme">
-          <img src="img/filmes/h.jpg" alt="filme 1">          
-        </div>
-        <div class="filme">
-          <img src="img/filmes/i.webp" alt="filme 1">          
-        </div>
-        <div class="filme">
-          <img src="img/filmes/j.webp" alt="filme 1">
-        </div>
-        <div class="filme">
-          <img src="img/filmes/l.jpg" alt="filme 1">
-        </div>
-        <div class="filme">
-          <img src="img/filmes/b.webp" alt="filme 1">
-        </div>
-        <div class="filme">
-          <img src="img/filmes/c.webp" alt="filme 1">          
-        </div>        
-        
       </div>
-    </div>
-  </div>
+    {% endif %}
+  {% endfor %}
 
   <footer>
     <p>
