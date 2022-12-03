@@ -136,6 +136,9 @@ body{
   flex-direction: row;
   font-size: 13px;
 }
+.img-perfil-logado{
+  cursor: pointer;
+}
 
 .opc-rigth .dropdown-menu ul li a span ion-icon,
 .opc-rigth .dropdown-menu ul li .opc-add-filme ion-icon{
