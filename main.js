@@ -26,11 +26,11 @@ app.use(adicionar_perfil);
 app.use(home_catalog);
 app.use(create_filme);
 
-app.listen(8000, erro => {
+app.listen(9000, erro => {
 
   if(erro){
     console.log('Deu erro');
   }else{
-    console.log('Servidor levantado p:8000');
+    console.log('Servidor levantado p:9000');
   }
 });
